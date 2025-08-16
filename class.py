@@ -38,8 +38,22 @@ class student:
         self._value=value
     def show(self):
         print(self._value)
+    def par_method(self):
+        print("this is parent")
     
 s1=student(10)
 print(s1._value)
 s1._value=12
 print(s1._value)
+
+class stud(student):
+    def par_method(self):
+        print("this is child method")
+        super().par_method()
+    def child_method(self):
+        print("hii bro")
+        super().par_method()
+child=stud(10)
+child.par_method()
+child.child_method()
+
