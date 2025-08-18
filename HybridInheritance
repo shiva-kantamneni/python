@@ -1,0 +1,28 @@
+# Base class
+class Animal:
+    def speak(self):
+        print("Animals make sounds.")
+
+# Derived class 1 (single inheritance from Animal)
+class Mammal(Animal):
+    def feature(self):
+        print("Mammals give birth to young ones.")
+
+# Derived class 2 (single inheritance from Animal)
+class Bird(Animal):
+    def fly(self):
+        print("Birds can fly.")
+
+# Derived class (Multiple Inheritance: from Mammal and Bird)
+class Bat(Mammal, Bird):
+    def special(self):
+        print("Bats are mammals but can fly like birds.")
+
+# Creating object
+bat = Bat()
+
+# Accessing methods
+bat.speak()     # From Animal
+bat.feature()   # From Mammal
+bat.fly()       # From Bird
+bat.special()   # From Bat
